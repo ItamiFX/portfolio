@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio personnel - Développeur Web">
-    <title>Mon Portfolio</title>
+    <meta name="description" content="Portfolio personnel - Développeur Informatique - Killian Marquet">
+    <title>Portfolio | Killian Marquet</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -13,7 +13,10 @@
         <nav class="navbar">
             <div class="container">
                 <div class="logo">
-                    <h1>Portfolio</h1>
+                    <h1>Killian Marquet</h1>
+                        <div class="typing-effect">
+                            <span id="typed"></span><span class="cursor">|</span>
+                        </div>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#accueil">Accueil</a></li>
@@ -26,13 +29,23 @@
         </nav>
     </header>
 
+    <div class="floating-navbar" aria-hidden="false">
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
     <!-- Hero Section -->
     <section id="accueil" class="hero">
         <div class="container">
-            <div class="hero-content">
+            <div class="hero-content reveal-on-scroll" data-delay="0">
                 <h2>Bonjour, je suis</h2>
-                <h1>Développeur Web</h1>
-                <p>Création de sites web modernes et responsives</p>
+                <h1>Killian Marquet</h1>
+                <p>Étudiant en Informatique </p>
+                <p><strong>Recherche : </strong> Stage d’informatique de 8 à 10 semaines à partir du 6 avril 2026.</p>
                 <a href="#contact" class="btn btn-primary">Me contacter</a>
             </div>
         </div>
@@ -41,11 +54,23 @@
     <!-- About Section -->
     <section id="a-propos" class="about">
         <div class="container">
-            <h2 class="section-title">À propos de moi</h2>
+            <h2 class="section-title reveal-on-scroll" data-delay="80">À propos de moi</h2>
             <div class="about-content">
-                <div class="about-text">
-                    <p>Passionné par le développement web, je crée des expériences utilisateur exceptionnelles en combinant design et fonctionnalité.</p>
-                    <p>Je suis spécialisé dans les technologies web modernes et j'aime relever de nouveaux défis.</p>
+                <div class="about-text reveal-on-scroll" data-delay="120">
+                    <p>J’ai 19 ans et je suis actuellement en deuxième année de BUT Informatique à l’IUT de Bordeaux
+                    <p>A travers mes projets personnels et universitaires, j’ai appris à allier savoir-faire technique et sens du travail en équipe dans le domaine de l’informatique.</p>
+                    <p>Ces expériences m’ont permis d’acquérir une bonne maîtrise de différents langages de programmation, de conception et du développement d’applications, ainsi qu’une véritable méthode de travail en équipe : gestion, planification et répartition des tâches.</p>
+
+                    <p>Mon parcours m’a aussi appris à communiquer efficacement, à travers la rédaction de documents techniques, la présentation de projets et la collaboration au sein de groupes.</p>
+
+                    <p>Ce portfolio est une représentation de mon évolution, de mes compétences techniques et de mon implication.
+                    <p>Il illustre ma capacité à apprendre, collaborer et répondre efficacement à des problématiques réelles, tout en démontrant des bases solides que je souhaite faire évoluer et mettre en pratique lors de mon futur stage.</p>
+                    <h3>Langues</h3>
+                    <ul>
+                        <li>Anglais : niveau technique</li>
+                        <li>Espagnol : lu / parlé / écrit</li>
+                        <li>Créole guadeloupéen : courant</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -54,23 +79,23 @@
     <!-- Skills Section -->
     <section id="competences" class="skills">
         <div class="container">
-            <h2 class="section-title">Mes compétences</h2>
+            <h2 class="section-title reveal-on-scroll" data-delay="100">Mes compétences</h2>
             <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>HTML5</h3>
-                    <p>Structure sémantique et accessible</p>
+                <div class="skill-card reveal-on-scroll" data-delay="150">
+                    <h3>Langages</h3>
+                    <p>Java, C#, C, PHP, JavaScript, React, Python, SQL, Bash, HTML/CSS.</p>
                 </div>
-                <div class="skill-card">
-                    <h3>CSS3</h3>
-                    <p>Design responsive et animations</p>
+                <div class="skill-card reveal-on-scroll" data-delay="220">
+                    <h3>Outils & technologies</h3>
+                    <p>Git, JUnit, JavaFX, NetBeans, VMware, Linux, Windows, VS Code, Symfony.</p>
                 </div>
-                <div class="skill-card">
-                    <h3>JavaScript</h3>
-                    <p>Interactivité et dynamisme</p>
+                <div class="skill-card reveal-on-scroll" data-delay="290">
+                    <h3>Développement</h3>
+                    <p>Algorithmique, POO, automatisation Python, recueil de besoins, modélisation (UML, MCD), visualisation et analyse de données.</p>
                 </div>
-                <div class="skill-card">
-                    <h3>Responsive Design</h3>
-                    <p>Adaptation tous écrans</p>
+                <div class="skill-card reveal-on-scroll" data-delay="360">
+                    <h3>Organisation & travail en équipe</h3>
+                    <p>Gestion de projet, répartition des tâches, rédaction de documentation technique, analyse de performances et diagnostics.</p>
                 </div>
             </div>
         </div>
@@ -79,35 +104,103 @@
     <!-- Projects Section -->
     <section id="projets" class="projects">
         <div class="container">
-            <h2 class="section-title">Mes projets</h2>
+            <h2 class="section-title reveal-on-scroll" data-delay="120">Mes projets</h2>
             <div class="projects-grid">
-                <div class="project-card">
+                <!-- Implémentation des règles d’un jeu et IA -->
+                <div class="project-card reveal-on-scroll" data-delay="180" data-link="projects/jeu-ia.html" tabindex="0" role="link">
                     <div class="project-image">
-                        <div class="placeholder-image">Projet 1</div>
+                        <div class="placeholder-image">Jeu & IA</div>
                     </div>
                     <div class="project-info">
-                        <h3>Nom du projet</h3>
-                        <p>Description du projet et technologies utilisées</p>
+                        <h3>Implémentation des règles d’un jeu & IA</h3>
+                        <p>Jeu en Java avec plusieurs niveaux, deux IA aux stratégies différentes et tests unitaires pour analyser les performances.</p>
+                        <p><strong>Technos :</strong> Java, NetBeans, JUnit, Git.</p>
                     </div>
                 </div>
-                <div class="project-card">
+
+                <!-- Visualisation de graphes -->
+                <div class="project-card reveal-on-scroll" data-delay="240" data-link="projects/visualisation-graphes.html" tabindex="0" role="link">
                     <div class="project-image">
-                        <div class="placeholder-image">Projet 2</div>
+                        <div class="placeholder-image">Graphes</div>
                     </div>
                     <div class="project-info">
-                        <h3>Nom du projet</h3>
-                        <p>Description du projet et technologies utilisées</p>
+                        <h3>Visualisation de graphes</h3>
+                        <p>Implémentation de structures de données et d’algorithmes de visualisation (Force-Directed, autosizing) avec étude de complexité.</p>
+                        <p><strong>Technos :</strong> Java, UMLet, Git, JUnit.</p>
                     </div>
                 </div>
-                <div class="project-card">
+
+                <!-- Création d’une base de données -->
+                <div class="project-card reveal-on-scroll" data-delay="300" data-link="projects/base-de-donnees.html" tabindex="0" role="link">
                     <div class="project-image">
-                        <div class="placeholder-image">Projet 3</div>
+                        <div class="placeholder-image">Base de données</div>
                     </div>
                     <div class="project-info">
-                        <h3>Nom du projet</h3>
-                        <p>Description du projet et technologies utilisées</p>
+                        <h3>Création d’une base de données</h3>
+                        <p>Conception d’un MCD, création du schéma relationnel et script SQL de remplissage, avec bilan détaillé de projet.</p>
+                        <p><strong>Technos :</strong> WinDesign, SQL Server.</p>
                     </div>
                 </div>
+
+                <!-- Installation de poste -->
+                <div class="project-card reveal-on-scroll" data-delay="360" data-link="projects/installation-poste.html" tabindex="0" role="link">
+                    <div class="project-image">
+                        <div class="placeholder-image">Poste virtuel</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Installation de poste</h3>
+                        <p>Mise en place d’un poste virtuel léger répondant à un cahier des charges, installation d’outils de développement et documentation détaillée.</p>
+                        <p><strong>Technos :</strong> VMware, Linux Mint, Bash, Git.</p>
+                    </div>
+                </div>
+
+                <!-- Diagnostic externe d’une entreprise -->
+                <div class="project-card reveal-on-scroll" data-delay="420" data-link="projects/diagnostic-externe.html" tabindex="0" role="link">
+                    <div class="project-image">
+                        <div class="placeholder-image">Diagnostic</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Diagnostic externe d’une entreprise</h3>
+                        <p>Analyse stratégique avec modèles PESTEL, 5 forces de Porter et SWOT, puis rédaction d’un rapport professionnel.</p>
+                        <p><strong>Compétences :</strong> analyse critique, synthèse, communication.</p>
+                    </div>
+                </div>
+
+                <!-- Bot Discord Vinted -->
+                <div class="project-card reveal-on-scroll" data-delay="480" data-link="projects/bot-discord.html" tabindex="0" role="link">
+                    <div class="project-image">
+                        <div class="placeholder-image">Bot Discord</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Bot Discord - Vinted</h3>
+                        <p>Bot automatisant la recherche et le filtrage d’articles Vinted directement depuis Discord.</p>
+                        <p><strong>Technos :</strong> Python, Selenium, API Discord.</p>
+                    </div>
+                </div>
+
+                <!-- PIXEL WAR -->
+                <div class="project-card reveal-on-scroll" data-delay="540" data-link="projects/pixel-war.html" tabindex="0" role="link">
+                    <div class="project-image">
+                        <div class="placeholder-image">Pixel War</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Pixel War</h3>
+                        <p>a Rajouter</p>
+                        <p><strong>Technos :</strong> HTML, CSS, Java Script</p>
+                    </div>
+                </div>
+                <!-- Visualisation de graphes -->
+                <div class="project-card reveal-on-scroll" data-delay="540" data-link="projects/visualisation-graphes-2.html" tabindex="0" role="link">
+                    <div class="project-image">
+                        <div class="placeholder-image">Visualisation de graphes</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Visualisation de graphes</h3>
+                        <p>a Rajouter</p>
+                        <p><strong>Technos :</strong> Java, JavaFX</p>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </section>
@@ -117,8 +210,14 @@
         <div class="container">
             <h2 class="section-title">Me contacter</h2>
             <div class="contact-content">
-                <form class="contact-form">
-                    <div class="form-group">
+                <div class="contact-info reveal-on-scroll" data-delay="120">
+                    <p>Pour toute opportunité de stage, projet ou collaboration :</p>
+                    <p><strong>Email :</strong> <a href="mailto:marquetkillian71@gmail.com">marquetkillian71@gmail.com</a></p>
+                    <p><strong>LinkedIn :</strong> <a href="http://www.linkedin.com/in/killian-marquet-b2797238b" target="_blank">Profil LinkedIn</a></p>
+                </div>
+
+                <form class="contact-form reveal-on-scroll" data-delay="180">
+                    <div class="form-group">    
                         <input type="text" id="name" name="name" placeholder="Votre nom" required>
                     </div>
                     <div class="form-group">
@@ -135,8 +234,8 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
+        <div class="container reveal-on-scroll" data-delay="120">
+            <p>&copy; 2025 - Portfolio de Killian Marquet. Tous droits réservés.</p>
         </div>
     </footer>
 
