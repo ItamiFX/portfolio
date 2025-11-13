@@ -103,3 +103,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+document.querySelectorAll('.placeholder-image[data-link]').forEach(el => {
+    const url = el.getAttribute('data-link');
+    el.style.cursor = 'pointer';
+    el.setAttribute('tabindex', '0');
+    el.setAttribute('role', 'link');
+
+    el.addEventListener('click', () => {
+        if (url) window.location.href = url;
+    });
+
+    el.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            if (url) window.location.href = url;
+        }
+    });
+});
