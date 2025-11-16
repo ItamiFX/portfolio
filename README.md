@@ -1,3 +1,44 @@
+# Portfolio — React (Vite) migration
+
+This repository was migrated to a React app (Vite) while keeping a backup of the original static site in `legacy/`.
+
+Quick start (Windows PowerShell):
+
+1. Install Node.js (includes `npm`)
+
+- Download and run the LTS installer from https://nodejs.org and follow the installer.
+- Or use `nvm-windows` (recommended if you want multiple Node versions): https://github.com/coreybutler/nvm-windows
+
+2. Verify installation (open a new PowerShell after installing):
+```powershell
+node -v
+npm -v
+```
+
+3. Install dependencies and start the dev server:
+```powershell
+npm install
+npm run dev
+```
+
+Why you saw "`npm` n'est pas reconnu" and how to fix it
+- The error means Windows cannot find the `npm` command. That happens when Node.js is not installed or the Node installation directory is not in your `PATH` environment variable.
+- Fixes:
+  - Install Node.js using the official installer (it will add `node` and `npm` to your PATH).
+  - If you installed Node but still see the error, close and re-open the terminal (PowerShell) or restart your PC so the PATH updates take effect.
+  - If you used a package manager (Chocolatey / Scoop / nvm), ensure that the chosen tool added Node to PATH or use the tool-specific commands to enable it.
+
+If you prefer I can:
+- Add placeholder project detail pages or a small React Router setup.
+- Add additional animations (parallax, particles, interactive cursor).
+- Commit everything and create a small build script.
+
+Files moved to `legacy/`:
+- `legacy/css/styles.css` (backup of original stylesheet)
+- `legacy/js/main.js` (backup of original JS)
+- `legacy/index.original.html` (light backup of original index)
+
+If anything looks off or you want a different animation direction, tell me which style you prefer (neon, glitch, particle field, interactive cursor, 3D parallax) and I’ll implement it next.
 # Portfolio - Site Web Personnel
 
 Un portfolio moderne et responsive créé avec HTML, CSS et JavaScript.

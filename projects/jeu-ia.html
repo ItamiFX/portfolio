@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Implémentation des règles d'un jeu & IA — Killian Marquet</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <title>Projet Lowatem — Jeu de plateau & IA — Killian Marquet</title>
+    <style>
+      body{font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;background:#071021;color:#e6eef8;margin:0;padding:32px}
+      .card{max-width:900px;margin:40px auto;padding:28px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:12px}
+      a{color:#a78bfa}
+      .thumb{width:100%;height:auto;border-radius:8px;display:block;margin-bottom:18px}
+    </style>
 </head>
 <body>
     <header>
@@ -15,23 +20,28 @@
         </nav>
     </header>
 
-    <main class="container">
-        <h1>Implémentation des règles d'un jeu & IA</h1>
-        <p>Ce projet est une implémentation en Java d'un jeu avec plusieurs niveaux et deux intelligences artificielles utilisant des stratégies différentes. L'objectif était d'explorer la conception d'IA simples, l'architecture orientée objet et les tests unitaires pour évaluer les performances des stratégies.</p>
+    <main class="card">
+        <h1>Projet Lowatem - Jeu de plateau en Java - <code> Nov/Dec 2024</code></h1>
+        <img src="../src/assets/lowatem-gui.png" alt="Lowatem">
+        <p>
+            Développement d’un jeu de plateau appelé <strong>Lowatem</strong> en Java.
+            Le projet s’est déroulé en deux phases : implémentation complète des règles du jeu
+        </p>
+        <br>
+        <p>Lowatem est un jeu de plateau au tour par tour développé en Java/JavaFX dans lequel un joueur affronte une IA. Chaque unité (soldat, bateau, avion…) possède son propre coût, sa portée de déplacement, ses points de vie et ses types de terrains accessibles, ce qui amène une vraie dimension stratégique.
+Le joueur choisit ses actions en sélectionnant une unité et en la déplaçant sur une case valide, avec possibilité d’attaquer si une cible est à portée. Toute action invalide (déplacement impossible, mauvaise unité, terrain interdit…) entraîne immédiatement la fin de la partie.
 
-        <h2>Fonctionnalités principales</h2>
+Mon rôle sur ce projet était de calculer toutes les actions possibles pour le joueur, d’implémenter les règles complètes du jeu et de réaliser des tests exhaustifs pour garantir le bon fonctionnement</p>
+<br>
+        <h2>Compétences mobilisées</h2>
         <ul>
-            <li>Moteur de règles du jeu (gestion des états, tours, conditions de victoire).</li>
-            <li>Deux IA avec stratégies différentes (heuristique simple vs recherche approfondie).</li>
-            <li>Tests unitaires avec JUnit pour mesurer performance et robustesse.</li>
-            <li>Structure modulaire pour faciliter l'extension et les expérimentations.</li>
+            <li>Programmation orientée objet en Java </li>
+            <li>Analyse et modélisation de règles de jeu</li>
+            <li>Architecture logicielle (séparation des responsabilités, modularité)</li>
         </ul>
 
         <h2>Technologies</h2>
-        <p>Java, JUnit, NetBeans, Git.</p>
-
-        <h2>Comment exécuter</h2>
-        <p>Le projet est une application Java — ouvrez-le dans votre IDE (NetBeans/IntelliJ) et exécutez la classe principale. Les tests JUnit peuvent être lancés depuis l'IDE ou via Maven/Gradle si vous avez le build script.</p>
+        <p>Java, Git, UML, IDE (NetBeans)</p>
 
         <p><a href="../index.html" class="btn">Retour</a></p>
     </main>

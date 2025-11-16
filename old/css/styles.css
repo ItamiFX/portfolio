@@ -413,6 +413,23 @@ section > .container {
     margin: 0 auto;
 }
 
+/* Shortened contact list styling */
+.contact-short p { color: var(--text-light); margin-bottom: 0.75rem; font-size: 1.05rem }
+.contact-list { list-style: none; margin: 0.5rem 0 0 0; padding: 0; display: flex; flex-direction: column; gap: 14px; align-items: stretch }
+.contact-item { display: block }
+.contact-link { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; padding: 12px 16px; border-radius: 14px; transition: transform 180ms cubic-bezier(.2,.9,.2,1), box-shadow 180ms ease; background: linear-gradient(90deg,var(--primary-color), var(--secondary-color)); box-shadow: 0 8px 20px rgba(37,99,235,0.08); }
+.contact-link:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(37,99,235,0.12) }
+.contact-link svg { flex: 0 0 auto; color: rgba(255,255,255,0.95) }
+.contact-label { font-size: 1.05rem; color: #fff; font-weight:600 }
+.contact-note { font-size: 0.85rem; color: var(--text-light); margin-top: 6px }
+
+/* Make sure the contact section stays compact on small screens */
+@media (max-width: 680px){
+    .contact-list{gap:10px}
+    .contact-label{font-size:1rem}
+    .contact-link{padding:10px 12px;border-radius:10px}
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
