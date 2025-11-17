@@ -18,7 +18,6 @@ const projects = [
   { title: "Jeu de plateau", desc: 'Implémentation des niveaux d’un jeu en Java', link: 'projects/jeu-ia.html', image: imgLowatem },
   { title: 'Visualisation de données', desc: 'Visualisation de CSV sous forme de graphes, comparatifs de données, superpositions...', link: 'projects/visualisation-de-donnees.html', image: imgSCH },
   { title: 'Visualisation de graphes', desc: 'Application Java de visualisation', link: 'projects/visualisation-graphes.html', image: imgGraphes },
-  // { title: 'Création de base de données', desc: 'Conception MCD et scripts SQL', link: 'projects/base-de-donnees.html', image: imgBD },
   { title: 'Installation de poste', desc: 'Installation de poste virtuel léger en suivant un cahier des charges', link: 'projects/installation-poste.html', image: imgVm },
   { title: 'Bot Discord - Vinted', desc: 'Scraping & automation via Discord', link: 'projects/bot-discord.html', image: imgVinted },
   { title: 'Pixel War', desc: 'Jeu front-end en HTML/CSS/JS', link: 'projects/pixel-war.html', image: imgTresor },

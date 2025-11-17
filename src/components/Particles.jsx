@@ -13,7 +13,6 @@ export default function Particles({ amount = 80 }){
     let height = canvas.clientHeight || 150
     canvas.width = Math.floor(width * dpr)
     canvas.height = Math.floor(height * dpr)
-    // Use setTransform to avoid cumulative scaling issues
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
 
     let particles = []
@@ -38,10 +37,8 @@ export default function Particles({ amount = 80 }){
     let rafId
     function draw(){
       ctx.clearRect(0, 0, width, height)
-      // subtle background glow overlay handled in CSS; draw particles and connections
       for(let i=0;i<particles.length;i++){
         const p = particles[i]
-        // move
         p.x += p.vx
         p.y += p.vy
 
@@ -50,7 +47,6 @@ export default function Particles({ amount = 80 }){
         if(p.y < -10) p.y = height + 10
         if(p.y > height + 10) p.y = -10
 
-        // mouse interaction (repel) - apply a capped impulse to avoid extreme velocities
         if (mouse.current.x !== null) {
           const dx = p.x - mouse.current.x
           const dy = p.y - mouse.current.y
@@ -60,7 +56,6 @@ export default function Particles({ amount = 80 }){
             if (dist < mouse.current.radius) {
               const angle = Math.atan2(dy, dx)
               const force = (mouse.current.radius - dist) / mouse.current.radius
-              // smaller impulse and smoother response
               const impulse = 0.14 * force
               p.vx += Math.cos(angle) * impulse
               p.vy += Math.sin(angle) * impulse
@@ -68,11 +63,9 @@ export default function Particles({ amount = 80 }){
           }
         }
 
-        // friction (keeps motion smooth)
         p.vx *= 0.995
         p.vy *= 0.995
 
-        // clamp velocity to avoid runaway or freeze due to floating point extremes
         const maxSpeed = 1.6
         const sp = Math.sqrt(p.vx*p.vx + p.vy*p.vy) || 0
         if (sp > maxSpeed) {
@@ -80,14 +73,12 @@ export default function Particles({ amount = 80 }){
           p.vy = (p.vy / sp) * maxSpeed
         }
 
-        // draw
         ctx.beginPath()
         ctx.fillStyle = `hsla(${p.hue},80%,60%, ${p.alpha})`
         ctx.arc(p.x, p.y, p.r, 0, Math.PI*2)
         ctx.fill()
       }
 
-      // draw connections (optimized): avoid full O(n^2) work when particle count is high
       const maxConnectThreshold = 80
       if (particles.length <= maxConnectThreshold) {
         for (let a = 0; a < particles.length; a++) {
@@ -120,7 +111,6 @@ export default function Particles({ amount = 80 }){
       canvas.width = Math.floor(width * dpr)
       canvas.height = Math.floor(height * dpr)
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
-      // re-init particles conservatively to adapt to new size
       init()
     }
 

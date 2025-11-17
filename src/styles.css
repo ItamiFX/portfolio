@@ -245,7 +245,6 @@ section > .container{min-height:calc(100vh - var(--header-height));display:flex;
   height: 100%;
   object-fit: cover;
   filter: brightness(1.05);
-  transition: transform .35s ease;
 }
 
 .photo-container:hover img {
@@ -317,7 +316,6 @@ section > .container{min-height:calc(100vh - var(--header-height));display:flex;
   opacity:1;
 }
 
-/* Logo marquee (right-to-left scrolling row) */
 .logo-marquee{overflow:hidden;position:relative;width:100%;padding:10px 6px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));}
 .marquee-track{display:flex;gap:14px;align-items:center;white-space:nowrap;will-change:transform;animation:marquee var(--marquee-duration,18s) linear infinite}
 .logo-marquee:hover .marquee-track{animation-play-state:paused}
@@ -386,7 +384,6 @@ section > .container{min-height:calc(100vh - var(--header-height));display:flex;
   color:var(--muted);
 }
 
-/* liste de coordonnées */
 .contact-list{
   list-style:none;
   margin-top:18px;

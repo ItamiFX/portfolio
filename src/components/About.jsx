@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import myPhoto from '../assets/kikx.png'
 
 export default function About(){
   return (
@@ -25,10 +24,10 @@ export default function About(){
             viewport={{ once: true }}
           >
             <div className="photo-container">
-              <img src="" alt="Photo de Killian" />
+              <img src="/src/assets/killian.jpg" alt="Photo de Killian" />
             </div>
           </motion.div>
-
+ 
           <motion.div 
             className="about-text" 
             initial={{opacity:0, y:20}} 
