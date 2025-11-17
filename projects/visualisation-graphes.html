@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualisation de graphes — Algorithme force-directed — Killian Marquet</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <title>Visualisation de graphes — Killian Marquet</title>
+             <style>
+            body{font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;background:#071021;color:#e6eef8;margin:0;padding:32px}
+            .card{max-width:900px;margin:40px auto;padding:28px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:12px}
+            a{color:#a78bfa}
+            .thumb-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start;margin-bottom:18px}
+            .thumb{width:100%;height:auto;border-radius:8px;display:block}
+            @media (max-width:980px){.thumb-row{grid-template-columns:repeat(2,1fr)}}
+            @media (max-width:560px){.thumb-row{grid-template-columns:repeat(1,1fr)}}
+        </style>
 </head>
 <body>
     <header>
@@ -15,19 +23,19 @@
         </nav>
     </header>
 
-    <main class="container">
-        <br>
-        <br>
-        <br>
-        <h1>Visualisation de graphes</h1>
-        <img src="../src/assets/graphes.png" alt="Graphes">
+    <main class="card">
+ <h1>Visualisation de graphes</h1>
+                <div class="thumb-row">
+                    <img class="thumb" src="../src/assets/graphes.png" alt="Graphes 1">
+                    <img class="thumb" src="../src/assets/graphes2.png" alt="Graphes 2">
+                    <img class="thumb" src="../src/assets/graphes3.png" alt="Graphes 3">
+                </div>
         <br>
         <h2>Objectifs</h2>
         <ul>
             <li>Comprendre le principe des algorithmes de disposition de graphes (forces d’attraction/répulsion)</li>
             <li>Coder les fonctions essentielles a la manipulation de graphs</li>
         </ul>
-        <br>
         <h2>Compétences mobilisées</h2>
         <ul>
             <li>Compréhension d’algorithmes de visualisation de données.</li>

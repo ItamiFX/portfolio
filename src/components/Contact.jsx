@@ -18,7 +18,7 @@ export default function Contact(){
         <h2 className="section-title">Me contacter</h2>
         <div className="contact-content">
           <motion.div className="contact-short" initial={{opacity:0, y:6}} whileInView={{opacity:1,y:0}} viewport={{once:true}}>
-            <p>Pour toute opportunité de stage, projet ou collaboration :</p>
+            <p>Pour toute opportunité de stage :</p>
 
             <motion.ul className="contact-list" aria-label="Coordonnées" variants={listVariants} initial="hidden" whileInView="show" viewport={{once:true}}>
               <motion.li className="contact-item" variants={itemVariants}>

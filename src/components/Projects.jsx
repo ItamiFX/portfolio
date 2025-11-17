@@ -6,6 +6,7 @@ import imgGraphes from '../assets/graphes.png'
 import imgIHM from '../assets/IHM.png'
 import imgLowatem from '../assets/lowatem-gui.png'
 import imgTresor from '../assets/tresor.png'
+import imgLaby from '../assets/labyri3.png'
 import imgOdomo from '../assets/odomo.png'
 import imgBD from '../assets/mcd.png'
 import imgSCH from '../assets/sch.png'
@@ -17,10 +18,11 @@ const projects = [
   { title: "Jeu de plateau", desc: 'Implémentation des niveaux d’un jeu en Java', link: 'projects/jeu-ia.html', image: imgLowatem },
   { title: 'Visualisation de données', desc: 'Visualisation de CSV sous forme de graphes, comparatifs de données, superpositions...', link: 'projects/visualisation-de-donnees.html', image: imgSCH },
   { title: 'Visualisation de graphes', desc: 'Application Java de visualisation', link: 'projects/visualisation-graphes.html', image: imgGraphes },
-  { title: 'Création de base de données', desc: 'Conception MCD et scripts SQL', link: 'projects/base-de-donnees.html', image: imgBD },
+  // { title: 'Création de base de données', desc: 'Conception MCD et scripts SQL', link: 'projects/base-de-donnees.html', image: imgBD },
   { title: 'Installation de poste', desc: 'Installation de poste virtuel léger en suivant un cahier des charges', link: 'projects/installation-poste.html', image: imgVm },
   { title: 'Bot Discord - Vinted', desc: 'Scraping & automation via Discord', link: 'projects/bot-discord.html', image: imgVinted },
-  { title: 'Pixel War', desc: 'Jeu front-end en HTML/CSS/JS', link: 'projects/pixel-war.html', image: imgTresor }
+  { title: 'Pixel War', desc: 'Jeu front-end en HTML/CSS/JS', link: 'projects/pixel-war.html', image: imgTresor },
+  { title: 'Labyrinthe', desc: "Prototype d'un labyrinthe interactif — génération & IA", link: 'projects/labyrinthe.html', image: imgLaby }
 ]
 
 export default function Projects(){
