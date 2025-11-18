@@ -1,16 +1,16 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-import imgVm from '../assets/vm.png'
-import imgGraphes from '../assets/graphes.png'
-import imgIHM from '../assets/IHM.png'
-import imgLowatem from '../assets/lowatem-gui.png'
-import imgTresor from '../assets/tresor.png'
-import imgLaby from '../assets/labyri3.png'
-import imgOdomo from '../assets/odomo.png'
-import imgBD from '../assets/mcd.png'
-import imgSCH from '../assets/sch.png'
-import imgVinted from '../assets/botv.png'
+import imgVm from '/assets/vm.png'
+import imgGraphes from '/assets/graphes.png'
+import imgIHM from '/assets/IHM.png'
+import imgLowatem from '/assets/lowatem-gui.png'
+import imgTresor from '/assets/tresor.png'
+import imgLaby from '/assets/labyri3.png'
+import imgOdomo from '/assets/odomo.png'
+import imgBD from '/assets/mcd.png'
+import imgSCH from '/assets/sch.png'
+import imgVinted from '/assets/botv.png'
 
 
 const projects = [

@@ -24,7 +24,7 @@ export default function About(){
             viewport={{ once: true }}
           >
             <div className="photo-container">
-              <img src="/src/assets/killian.jpg" alt="Photo de Killian" />
+              <img src="/assets/killian.jpg" alt="Photo de Killian" />
             </div>
           </motion.div>
  
