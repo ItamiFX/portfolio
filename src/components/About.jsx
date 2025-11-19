@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import photo from '../assets/photo.jpg'
 
 export default function About(){
   return (
@@ -24,7 +25,7 @@ export default function About(){
             viewport={{ once: true }}
           >
             <div className="photo-container">
-              <img src="/assets/killian.jpg" alt="Photo de Killian" />
+              <img src={photo} alt="Photo de Killian" />
             </div>
           </motion.div>
  
