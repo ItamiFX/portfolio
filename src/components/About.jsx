@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import photo from '../assets/photo.jpg'
+import photo from '../../public/assets/killian.jpg'
 
 export default function About(){
   return (
@@ -10,7 +10,7 @@ export default function About(){
         <motion.h2 
           className="section-title" 
           initial={{opacity:0, y:20}} 
-          whileInView={{opacity:1, y:0}} 
+          whileInView={{opacity:1, y:0} } 
           viewport={{once:true}}
         >
           À propos de moi
