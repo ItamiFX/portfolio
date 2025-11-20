@@ -5,7 +5,7 @@ export default function Footer(){
     <footer>
       <div className="container footer-inner">
         <p>© Killian Marquet</p>
-        <a href="public/mentionsLegales.html">Mentions Legales</a>
+        <a href="/mentionsLegales.html">Mentions Legales</a>
       </div>
     </footer>
   )
