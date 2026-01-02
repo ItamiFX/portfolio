@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import photo from '../../public/assets/killian.jpg'
+import photo from '/assets/phtoblkfont.png'
 
 export default function About(){
   return (
@@ -36,7 +36,7 @@ export default function About(){
             viewport={{once:true}}
           >
             <p>Je m'appelle Killian Marquet, j'ai 19 ans et je suis en BUT Informatique à l'IUT de Bordeaux</p>
-            <p>Je m'intéresse particulièrement à la cybersécurité et aux arts digitaux et à l'auto-entreprenariat</p>
+            <p>Je m'intéresse particulièrement à la cybersécurité, aux arts digitaux et à l'auto-entreprenariat</p>
             <p>Ce portfolio est une ouverture sur mes projets, mes compétences.</p>
             <p>Je suis ouvert aux opportunités de stage étant disponible du 6 avril au 12 juin.</p>
           </motion.div>

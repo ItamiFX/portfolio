@@ -462,4 +462,82 @@ footer{padding:28px 0;text-align:center;color:var(--muted)}
   background: linear-gradient(180deg, rgba(124,58,237,0.04) 0%, rgba(7,10,20,0.9) 100%);
   padding: 48px 0;
   border-top: 1px solid rgba(148,163,255,0.03);
-}   
+}
+
+/* activer animations */
+.animation-toggle-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  font-weight: 600;
+  transition: color .2s ease, transform .2s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.animation-toggle-btn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .25s ease;
+}
+
+.animation-toggle-btn:hover {
+  color: var(--primary-color);
+  transform: translateY(-1px);
+}
+
+.animation-toggle-btn:hover::after {
+  transform: scaleX(1);
+}
+
+/* Désactiver animations*/
+body.no-animations {
+  animation: none !important;
+}
+
+body.no-animations .hero::before,
+body.no-animations .hero::after {
+  animation: none !important;
+}
+
+body.no-animations .btn-primary::before {
+  animation: none !important;
+}
+
+body.no-animations .typing span::after {
+  animation: none !important;
+  opacity: 1;
+}
+
+body.no-animations .reveal-name {
+  animation: none !important;
+  width: 100%;
+  border-right: none;
+}
+
+body.no-animations .marquee-track {
+  animation: none !important;
+}
+
+body.no-animations .particles-canvas {
+  display: none;
+}
+
+body.no-animations .nav-menu a:hover,
+body.no-animations .btn-primary:hover,
+body.no-animations .project-card:hover {
+  transition: all 0.2s ease;
+}

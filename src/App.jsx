@@ -7,21 +7,24 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import { AnimatePresence } from 'framer-motion'
+import { AnimationProvider } from './contexts/animations'
 
 export default function App() {
   return (
-    <div className="app-root">
-      <Header />
-      <main>
-        <AnimatePresence>
-          <Hero key="hero" />
-          <About key="about" />
-          <Skills key="skills" />
-          <Projects key="projects" />
-          <Contact key="contact" />
-        </AnimatePresence>
-      </main>
-      <Footer />
-    </div>
+    <AnimationProvider>
+      <div className="app-root">
+        <Header />
+        <main>
+          <AnimatePresence>
+            <Hero key="hero" />
+            <About key="about" />
+            <Skills key="skills" />
+            <Projects key="projects" />
+            <Contact key="contact" />
+          </AnimatePresence>
+        </main>
+        <Footer />
+      </div>
+    </AnimationProvider>
   )
 }

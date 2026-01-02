@@ -1,41 +1,53 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 
 export default function Particles({ amount = 80 }){
   const canvasRef = useRef(null)
   const mouse = useRef({ x: null, y: null, radius: 80 })
+  const [isReady, setIsReady] = useState(false)
 
   useEffect(() => {
     const canvas = canvasRef.current
-    const ctx = canvas.getContext('2d')
+    if (!canvas) return
+    
+    const initTimeout = setTimeout(() => {
+      const ctx = canvas.getContext('2d')
+      if (!ctx) return
 
-    let dpr = window.devicePixelRatio || 1
-    let width = canvas.clientWidth || 300
-    let height = canvas.clientHeight || 150
-    canvas.width = Math.floor(width * dpr)
-    canvas.height = Math.floor(height * dpr)
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
-
-    let particles = []
-
-    function rand(min, max){ return Math.random() * (max - min) + min }
-
-    function init(){
-      particles = []
-      for(let i=0;i<amount;i++){
-        particles.push({
-          x: rand(0, width),
-          y: rand(0, height),
-          vx: rand(-0.35, 0.35),
-          vy: rand(-0.35, 0.35),
-          r: rand(1, 3),
-          hue: rand(250, 290),
-          alpha: rand(0.35, 0.9)
-        })
+      let dpr = window.devicePixelRatio || 1
+      let width = canvas.clientWidth || canvas.parentElement?.clientWidth || 300
+      let height = canvas.clientHeight || canvas.parentElement?.clientHeight || 150
+      
+      if (width === 0 || height === 0) {
+        width = window.innerWidth
+        height = window.innerHeight
       }
-    }
+      
+      canvas.width = Math.floor(width * dpr)
+      canvas.height = Math.floor(height * dpr)
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
+
+      let particles = []
+
+      function rand(min, max){ return Math.random() * (max - min) + min }
+
+      function init(){
+        particles = []
+        for(let i=0;i<amount;i++){
+          particles.push({
+            x: rand(0, width),
+            y: rand(0, height),
+            vx: rand(-0.35, 0.35),
+            vy: rand(-0.35, 0.35),
+            r: rand(1, 3),
+            hue: rand(250, 290),
+            alpha: rand(0.35, 0.9)
+          })
+        }
+      }
 
     let rafId
     function draw(){
+      if (!canvas || !ctx) return
       ctx.clearRect(0, 0, width, height)
       for(let i=0;i<particles.length;i++){
         const p = particles[i]
@@ -105,8 +117,9 @@ export default function Particles({ amount = 80 }){
     }
 
     function onResize(){
-      width = canvas.clientWidth || width
-      height = canvas.clientHeight || height
+      if (!canvas) return
+      width = canvas.clientWidth || canvas.parentElement?.clientWidth || width
+      height = canvas.clientHeight || canvas.parentElement?.clientHeight || height
       dpr = window.devicePixelRatio || 1
       canvas.width = Math.floor(width * dpr)
       canvas.height = Math.floor(height * dpr)
@@ -123,6 +136,7 @@ export default function Particles({ amount = 80 }){
 
     init()
     draw()
+    setIsReady(true)
 
     window.addEventListener('resize', onResize)
     canvas.addEventListener('mousemove', onMove)
@@ -134,6 +148,9 @@ export default function Particles({ amount = 80 }){
       canvas.removeEventListener('mousemove', onMove)
       canvas.removeEventListener('mouseleave', onLeave)
     }
+    }, 50)
+    
+    return () => clearTimeout(initTimeout)
   }, [amount])
 
   return (
