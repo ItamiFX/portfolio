@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Robot League — Killian Marquet</title>
+    <style>
+      body{
+        font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;
+        background:#071021;
+        color:#e6eef8;
+        margin:0;
+        padding:32px
+      }
+      .card{
+        max-width:900px;
+        margin:40px auto;
+        padding:28px;
+        background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));
+        border-radius:12px
+      }
+      a{color:#a78bfa}
+      .thumb-row{
+        display:flex;
+        gap:16px;
+        flex-wrap:wrap;
+        justify-content:center;
+        margin-bottom:18px
+      }
+      .thumb{
+        flex:1 1 320px;
+        max-width:48%;
+        height:auto;
+        border-radius:8px;
+        display:block
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <a href="../index.html">← Retour au portfolio</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="card">
+      <h1>Robot League (Symfony / MySQL)</h1>
+
+      <div class="thumb-row">
+        <img class="thumb" src="../assets/robotLeague1.png" alt="Robot League aperçu 1">
+        <img class="thumb" src="../assets/robotLeague2.png" alt="Robot League aperçu 2">
+        <img class="thumb" src="../assets/robotLeague3.png" alt="Aperçu Robot League" />
+      </div>
+      <p>
+        Robot League est une <strong>plateforme web</strong> qui gère toutes les étapes d’une compétition
+        de football pour robots : gestion sécurisée des <strong>utilisateurs</strong>, des <strong>équipes</strong>
+        et des <strong>compétitions</strong>, avec une interface responsive
+      </p>
+
+      <p>
+        Le projet automatise aussi des tâches plus complexes comme la <strong>génération de créneaux</strong>
+        et la <strong>planification des rencontres</strong>, afin de faciliter le travail des organisateurs
+      </p>
+
+      <h2>Fonctionnalités développées</h2>
+      <ul>
+        <li>Système sécurisé : gestion des utilisateurs, rôles et permissions</li>
+        <li>Création / gestion des équipes et des compétitions</li>
+        <li>Interface responsive avec Twig + TailwindCSS</li>
+        <li>Automatisation : génération de créneaux et planification des matchs</li>
+        <li>Gestion de données MySQL</li>
+      </ul>
+
+      <h2>Technologies</h2>
+      <p>Symfony, PHP, MySQL, Twig, TailwindCSS, Git</p>
+
+      <h2>Amélioration possible</h2>
+      <ul>
+        <li>Ajout d’un système de rencontres <strong>éliminatoires</strong> (phases finales / bracket).</li>
+      </ul>
+
+      <p><a href="../index.html">← Retour au portfolio</a></p>
+    </main>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>
