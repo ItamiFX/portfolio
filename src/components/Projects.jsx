@@ -11,6 +11,10 @@ import imgOdomo from '/assets/odomo.png'
 import imgBD from '/assets/mcd.png'
 import imgSCH from '/assets/sch.png'
 import imgVinted from '/assets/botv.png'
+import rl1 from '/assets/robotLeague1.png'
+import rl2 from '/assets/robotLeague2.png'
+import rl3 from '/assets/robotLeague3.png'
+
 
 
 const projects = [
@@ -21,7 +25,8 @@ const projects = [
   { title: 'Installation de poste', desc: 'Installation de poste virtuel léger en suivant un cahier des charges', link: 'portfolio/projects/installation-poste.html', image: imgVm },
   { title: 'Bot Discord - Vinted', desc: 'Scraping & automation via Discord', link: 'portfolio/projects/bot-discord.html', image: imgVinted },
   { title: 'Pixel War', desc: 'Jeu front-end en HTML/CSS/JS', link: 'portfolio/projects/pixel-war.html', image: imgTresor },
-  { title: 'Labyrinthe', desc: "Prototype d'un labyrinthe interactif — génération & IA", link: 'portfolio/projects/labyrinthe.html', image: imgLaby }
+  { title: 'Labyrinthe', desc: "Prototype d'un labyrinthe interactif — génération & IA", link: 'portfolio/projects/labyrinthe.html', image: imgLaby },
+  { title: 'Robot League', desc: "Competition de football de Robots", link: 'portfolio/projects/robotLeague.html', image: rl3 },
 ]
 
 export default function Projects(){
