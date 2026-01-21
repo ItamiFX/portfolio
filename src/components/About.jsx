@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import photo from '/assets/phtoblkfont.png'
+import photo from '/assets/killian.jpg'
 
 export default function About(){
   return (
