@@ -839,6 +839,175 @@ body.no-animations .project-card:hover {
   transition: all 0.2s ease;
 }
 
+/* ========================================================= 
+   MODAL PROJECT
+   ========================================================= */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 10, 20, 0.92);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.modal-content {
+  position: relative;
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+  border: 1px solid rgba(196,181,253,.24);
+  border-radius: var(--radius-xl);
+  max-width: 900px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 80px rgba(0,0,0,.7);
+}
+
+.modal-close {
+  position: sticky;
+  top: 16px;
+  right: 16px;
+  float: right;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(196,181,253,.2);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text);
+  font-size: 20px;
+  transition: all 0.22s var(--ease);
+  z-index: 10;
+}
+
+.modal-close:hover {
+  background: rgba(255,255,255,.14);
+  border-color: rgba(196,181,253,.4);
+  transform: rotate(90deg);
+}
+
+.modal-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  padding: 24px 24px 0;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(196,181,253,.16);
+  box-shadow: 0 8px 24px rgba(0,0,0,.3);
+}
+
+.modal-body {
+  padding: 32px;
+  clear: both;
+}
+
+.modal-body h2 {
+  font-size: 2rem;
+  margin: 0 0 20px;
+  background: linear-gradient(135deg, #e6eef9 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.modal-body h3 {
+  font-size: 1.3rem;
+  color: var(--text);
+  margin: 24px 0 12px;
+}
+
+.modal-section {
+  margin-bottom: 24px;
+}
+
+.modal-section p {
+  color: var(--muted);
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+.modal-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.modal-section li {
+  color: var(--muted);
+  padding-left: 24px;
+  position: relative;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.modal-section li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--violet);
+  font-weight: bold;
+}
+
+.modal-actions {
+  margin-top: 32px;
+  display: flex;
+  gap: 12px;
+}
+
+.btn-demo {
+  display: inline-block;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, rgba(124,58,237,.75), rgba(168,85,247,.65));
+  border: 1px solid rgba(196,181,253,.24);
+  border-radius: 999px;
+  color: white;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.28s var(--ease);
+  box-shadow: 0 8px 24px rgba(124,58,237,.3);
+}
+
+.btn-demo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(124,58,237,.45);
+  border-color: rgba(196,181,253,.4);
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    max-height: 90vh;
+    margin: 0;
+  }
+  
+  .modal-body {
+    padding: 24px 20px;
+  }
+  
+  .modal-images {
+    padding: 16px 16px 0;
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-body h2 {
+    font-size: 1.6rem;
+  }
+}
+
 /* ================================
    SKILLS
    ================================ */

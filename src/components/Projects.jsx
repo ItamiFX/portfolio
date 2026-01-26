@@ -1,62 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-
-import imgVm from '/assets/vm.png'
-import imgGraphes from '/assets/graphes.png'
-import imgIHM from '/assets/IHM.png'
-import imgLowatem from '/assets/lowatem-gui.png'
-import imgTresor from '/assets/tresor.png'
-import imgLaby from '/assets/labyri3.png'
-import imgOdomo from '/assets/odomo.png'
-import imgBD from '/assets/mcd.png'
-import imgSCH from '/assets/sch.png'
-import imgVinted from '/assets/botv.png'
-import rl1 from '/assets/robotLeague1.png'
-import rl2 from '/assets/robotLeague2.png'
-import rl3 from '/assets/robotLeague3.png'
-
-
-
-const projects = [
-  { title: 'Interface graphique de jeu', desc: 'Interface graphique pour jeu de plateau — UI, animations et menus', link: 'portfolio/projects/interface-graphique-jeu.html', image: imgIHM },
-  { title: "Jeu de plateau", desc: 'Implémentation des niveaux d’un jeu en Java', link: 'portfolio/projects/jeu-ia.html', image: imgLowatem },
-  { title: 'Visualisation de données', desc: 'Visualisation de CSV sous forme de graphes, comparatifs de données, superpositions...', link: 'portfolio/projects/visualisation-de-donnees.html', image: imgSCH },
-  { title: 'Visualisation de graphes', desc: 'Application Java de visualisation', link: 'portfolio/projects/visualisation-graphes.html', image: imgGraphes },
-  { title: 'Installation de poste', desc: 'Installation de poste virtuel léger en suivant un cahier des charges', link: 'portfolio/projects/installation-poste.html', image: imgVm },
-  { title: 'Bot Discord - Vinted', desc: 'Scraping & automation via Discord', link: 'portfolio/projects/bot-discord.html', image: imgVinted },
-  { title: 'Pixel War', desc: 'Jeu front-end en HTML/CSS/JS', link: 'portfolio/projects/pixel-war.html', image: imgTresor },
-  { title: 'Labyrinthe', desc: "Prototype d'un labyrinthe interactif — génération & IA", link: 'portfolio/projects/labyrinthe.html', image: imgLaby },
-  { title: 'Robot League', desc: "Competition de football de Robots", link: 'portfolio/projects/robotLeague.html', image: rl3 },
-]
+import { projectsData } from '../data/projectsData'
+import ProjectModal from './ProjectModal'
 
 export default function Projects(){
+  const [selectedProject, setSelectedProject] = useState(null)
+
   return (
     <section id="projets" className="projects">
       <div className="container">
         <h2 className="section-title">Mes projets</h2>
 
         <div className="projects-grid">
-          {projects.map((p,i) => (
+          {projectsData.map((p,i) => (
             <motion.article
-              key={p.title}
+              key={p.id}
               className="project-card"
               initial={{opacity:0, y:30}}
               whileInView={{opacity:1,y:0}}
               transition={{delay: i*0.08}}
               viewport={{once:true}}
-              onClick={() => {
-                if (!p.link) return
-                const href = p.link.startsWith('/') ? p.link : `/${p.link}`
-                window.location.href = href
-              }}
+              onClick={() => setSelectedProject(p)}
               onKeyDown={(e) => {
-                if ((e.key === 'Enter' || e.key === ' ') && p.link) {
-                  const href = p.link.startsWith('/') ? p.link : `/${p.link}`
-                  window.location.href = href
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  setSelectedProject(p)
                 }
               }}
               tabIndex={0}
-              role="link"
+              role="button"
+              aria-label={`Ouvrir les détails de ${p.title}`}
             >
               <div className="project-image">
                 <div
@@ -73,6 +46,13 @@ export default function Projects(){
           ))}
         </div>
       </div>
+
+      {selectedProject && (
+        <ProjectModal 
+          project={selectedProject} 
+          onClose={() => setSelectedProject(null)} 
+        />
+      )}
     </section>
   )
 }
