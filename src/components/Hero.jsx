@@ -19,7 +19,7 @@ export default function Hero(){
           <h2>Bonjour, je suis</h2>
           <h1><span className="reveal-name">Killian Marquet</span></h1>
 
-          <p>Étudiant en informatique — Passionné par la cybersécurité et les arts digitaux.</p>
+          <p>Étudiant en informatique — Développeur Full-Stack avec un intérêt pour la cybersécurité et les arts digitaux.</p>
           <a className="btn btn-primary" href="#contact">Me contacter</a>
         </HeroContent>
       </div>

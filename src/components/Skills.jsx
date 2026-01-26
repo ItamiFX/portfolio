@@ -28,7 +28,6 @@ import imgWindows from '/assets/logos/windows.svg'
 const langLogos = [
   { name: 'java', url: imgJava },
   { name: 'csharp', url: imgCsharp },
-  { name: 'c', url: imgC },
   { name: 'php', url: imgPhp },
   { name: 'javascript', url: imgJs },
   { name: 'react', url: imgReact },
@@ -58,7 +57,7 @@ const toolLogos = [
 const skills = [
   { title: 'Langages', logos: langLogos },
   { title: 'Outils & technologies', logos: toolLogos },
-  { title: 'Développement', text: 'Algorithmique, POO, automatisation, modélisation (UML, MCD).' }
+  { title: 'Développement et Méthodologie', text: 'Algorithmique, Programmation orientée objet, automatisation, modélisation (UML, MCD), Méthodes Agiles (SCRUM)' }
 ]
 
 export default function Skills(){

@@ -38,7 +38,7 @@ export default function About(){
             <p>Je m'appelle Killian Marquet, j'ai 19 ans et je suis en BUT Informatique à l'IUT de Bordeaux</p>
             <p>Je m'intéresse particulièrement à la cybersécurité, aux arts digitaux et à l'auto-entreprenariat</p>
             <p>Ce portfolio est une ouverture sur mes projets, mes compétences.</p>
-            <p>Je suis ouvert aux opportunités de stage étant disponible du 6 avril au 12 juin.</p>
+            <p>Je suis ouvert aux opportunités de stage étant disponible du 6 avril au 12 juin 2026.</p>
           </motion.div>
         </div>
       </div>

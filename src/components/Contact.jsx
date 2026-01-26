@@ -41,15 +41,6 @@ export default function Contact(){
                   <span className="contact-label">Profil LinkedIn</span>
                 </motion.a>
               </motion.li>
-
-              <motion.li className="contact-item" variants={itemVariants}>
-                <motion.a className="contact-link" href="tel:+33652531768" whileHover={{scale:1.03}} whileTap={{scale:0.98}}>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.09 4.18 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.72c.12.9.38 1.76.76 2.57a2 2 0 0 1-.45 2.11L8.91 9.91a16 16 0 0 0 6 6l1.5-1.5a2 2 0 0 1 2.11-.45c.81.38 1.67.64 2.57.76A2 2 0 0 1 22 16.92z" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                  <span className="contact-label">+33 6 52 53 17 68</span>
-                </motion.a>
-              </motion.li>
             </motion.ul>
           </motion.div>
         </div>
