@@ -31,7 +31,11 @@
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;overflow-x:hidden}
+html{
+  scroll-behavior:smooth;
+  overflow-x:hidden;
+  scroll-padding-top:calc(var(--header-height) + 20px);
+}
 body{
   margin:0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
@@ -107,8 +111,11 @@ section{
 }
 
 .site-header{
-  position:sticky;
+  position:fixed;
   top:0;
+  left:0;
+  right:0;
+  width:100%;
   z-index:50;
   backdrop-filter: blur(14px);
   background: linear-gradient(180deg, rgba(11,15,42,.72), rgba(11,15,42,.28));
