@@ -4,46 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Visualisation de données — Killian Marquet</title>
-    <style>
-      body{
-        font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;
-        background:#071021;
-        color:#e6eef8;
-        margin:0;
-        padding:32px;
-      }
-      .card{
-        max-width:900px;
-        margin:40px auto;
-        padding:28px;
-        background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));
-        border-radius:12px;
-      }
-      a{color:#a78bfa}
-      .thumb-row{
-        display:grid;
-        grid-template-columns:repeat(3,1fr);
-        gap:16px;
-        align-items:start;
-        margin-bottom:18px;
-      }
-      .thumb{
-        width:100%;
-        height:auto;
-        border-radius:8px;
-        display:block;
-      }
-      @media (max-width:980px){
-        .thumb-row{grid-template-columns:repeat(2,1fr)}
-      }
-      @media (max-width:560px){
-        .thumb-row{grid-template-columns:repeat(1,1fr)}
-      }
-    </style>
+    <link rel="stylesheet" href="../css/project-styles.css">
   </head>
   <body>
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <a href="../index.html">← Retour au portfolio</a>
+        </div>
+      </nav>
+    </header>
+    
     <main class="card">
-      <a href="../index.html">← Retour au portfolio</a>
       <h1>Visualisation de données (Python)</h1>
       <p>
         Application de visualisation permettant de produire des <strong>graphiques simples</strong>
@@ -77,10 +49,10 @@
         <li>Utilisation de <strong>Matplotlib et Pandas</strong> pour les graphiques.</li>
         <li>Structuration d’un projet</li>
       </ul>
-      <br>
+      
       <h2>Technologies</h2>
-      <p>Python, Git, mySQL, C#, IDE VisualStudioCode, VisualStudio</p>
-      <p><a href="../index.html">← Retour au portfolio</a></p>
+      <p>Python, Git, MySQL, C#, IDE Visual Studio Code, Visual Studio</p>
+      <p><a href="../index.html" class="btn">← Retour au portfolio</a></p>
     </main>
   </body>
 </html>

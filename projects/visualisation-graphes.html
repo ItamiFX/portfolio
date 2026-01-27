@@ -4,15 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visualisation de graphes — Killian Marquet</title>
-             <style>
-            body{font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;background:#071021;color:#e6eef8;margin:0;padding:32px}
-            .card{max-width:900px;margin:40px auto;padding:28px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:12px}
-            a{color:#a78bfa}
-            .thumb-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start;margin-bottom:18px}
-            .thumb{width:100%;height:auto;border-radius:8px;display:block}
-            @media (max-width:980px){.thumb-row{grid-template-columns:repeat(2,1fr)}}
-            @media (max-width:560px){.thumb-row{grid-template-columns:repeat(1,1fr)}}
-        </style>
+    <link rel="stylesheet" href="../css/project-styles.css">
 </head>
 <body>
     <header>
@@ -24,21 +16,20 @@
     </header>
 
     <main class="card">
- <h1>Visualisation de graphes</h1>
-                <div class="thumb-row">
-                    <img class="thumb" src="../assets/graphes.png" alt="Graphes 1">
-                    <img class="thumb" src="../assets/graphes2.png" alt="Graphes 2">
-                    <img class="thumb" src="../assets/graphes3.png" alt="Graphes 3">
-                </div>
-        <br>
-        <p>
-        Interface de visualisation de graphes 
-      </p>
+        <h1>Visualisation de graphes</h1>
+        <div class="thumb-row">
+            <img class="thumb" src="../assets/graphes.png" alt="Graphes 1">
+            <img class="thumb" src="../assets/graphes2.png" alt="Graphes 2">
+            <img class="thumb" src="../assets/graphes3.png" alt="Graphes 3">
+        </div>
+        
+        <p>Une application fonctionnelle permettant de visualiser des graphes en évitant tout “bruit visuel” induit par le nombre important de croisements d’arêtes.</p>
         <h2>Objectifs</h2>
         <ul>
-            <li>Comprendre le principe des algorithmes de disposition de graphes (forces d’attraction/répulsion)</li>
-            <li>Coder les fonctions essentielles a la manipulation de graphs</li>
+            <li>Comprendre le principe des algorithmes de disposition de graphes (forces d'attraction/répulsion).</li>
+            <li>Coder les fonctions essentielles à la manipulation de graphes.</li>
         </ul>
+        
         <h2>Compétences mobilisées</h2>
         <ul>
             <li>Compréhension d’algorithmes de visualisation de données.</li>
@@ -48,9 +39,7 @@
         <h2>Technologies</h2>
         <p>Java, JavaFX, Git.</p>
 
-        <p><a href="../index.html" class="btn">Retour</a></p>
+        <p><a href="../index.html" class="btn">← Retour au portfolio</a></p>
     </main>
-
-    <script src="../js/main.js"></script>
 </body>
 </html>
