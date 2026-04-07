@@ -24,9 +24,11 @@ export default function About(){
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
           >
+            {/*
             <div className="photo-container">
               <img src={photo} alt="Photo de Killian" />
             </div>
+            */}
           </motion.div>
  
           <motion.div 
