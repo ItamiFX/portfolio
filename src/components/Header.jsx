@@ -6,6 +6,7 @@ const nav = [
   { href: '#accueil', label: 'Accueil' },
   { href: '#a-propos', label: 'À propos' },
   { href: '#competences', label: 'Compétences' },
+  { href: '#stage-tbmcore', label: 'Stage TBMCore' },
   { href: '#projets', label: 'Projets' },
   { href: '#contact', label: 'Contact' }
 ]
