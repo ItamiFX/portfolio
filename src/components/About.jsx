@@ -1,47 +1,25 @@
 import React from 'react'
-import { motion } from 'framer-motion'
-import photo from '/assets/Photok.jpg'
 
-export default function About(){
+export default function About() {
   return (
     <section id="a-propos" className="about">
-      <div className="container">
-        
-        <motion.h2 
-          className="section-title" 
-          initial={{opacity:0, y:20}} 
-          whileInView={{opacity:1, y:0} } 
-          viewport={{once:true}}
-        >
-          À propos de moi
-        </motion.h2>
-
+      <div className="container about-layout">
+        <div className="about-intro">
+          <span className="eyebrow">02 / À PROPOS</span>
+          <h2 className="section-title">Moi, c’est<br /><em>Killian.</em></h2>
+          <p className="about-location">Étudiant en BUT Informatique<br />IUT de Bordeaux</p>
+          <div className="about-interests" aria-label="Centres d’intérêt">
+            <span>Cybersécurité</span><span>Graphisme</span><span>Entrepreneuriat</span>
+          </div>
+        </div>
         <div className="about-content">
-          <motion.div 
-            className="about-photo-frame"
-            initial={{ opacity: 0, scale: 0.85, x: 30 }}
-            whileInView={{ opacity: 1, scale: 1, x: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
-            {
-            <div className="photo-container">
-              <img src={photo} alt="Photo de Killian" />
-            </div>
-            }
-          </motion.div>
- 
-          <motion.div 
-            className="about-text" 
-            initial={{opacity:0, y:20}} 
-            whileInView={{opacity:1, y:0}} 
-            viewport={{once:true}}
-          >
-            <p>Je m'appelle Killian Marquet, j'ai 19 ans et je suis en BUT Informatique à l'IUT de Bordeaux</p>
-            <p>Je m'intéresse particulièrement à la cybersécurité, aux arts digitaux et à l'auto-entreprenariat</p>
-            <p>Ce portfolio est une ouverture sur mes projets, mes compétences.</p>
-            <p>Je suis ouvert aux opportunités de stage étant disponible du 6 avril au 12 juin 2026.</p>
-          </motion.div>
+          <div className="about-opportunity">
+            <span className="opportunity-label"><i /> MON PROCHAIN OBJECTIF</span>
+            <p>Actuellement en <strong>3ᵉ année de BUT Informatique</strong>, je suis à la recherche d’un <strong>stage de 14 semaines à partir du 29 mars 2027</strong>.</p>
+            <p>Passionné par le développement informatique, je m’intéresse aussi bien au <strong>front-end</strong> qu’au <strong>back-end</strong>, avec un intérêt particulier pour le <strong>développement full-stack</strong>.</p>
+            <p>Je souhaite mettre mes compétences en pratique, découvrir de nouveaux environnements techniques et contribuer à des projets concrets.</p>
+            <a href="#contact">Échangeons <span aria-hidden="true">+</span></a>
+          </div>
         </div>
       </div>
     </section>

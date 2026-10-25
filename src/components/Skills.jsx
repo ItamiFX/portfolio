@@ -1,93 +1,28 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import imgAngular from '/assets/logos/angular.png'
-import imgBash from '/assets/logos/bash.svg'
-import imgC from '/assets/logos/c.svg'
-import imgCsharp from '/assets/logos/csharp.svg'
-import imgCss3 from '/assets/logos/css3.svg'
-import imgGit from '/assets/logos/git.svg'
-import imgHtml5 from '/assets/logos/html5.svg'
-import imgJava from '/assets/logos/java.png'
-import imgJavafx from '/assets/logos/javafx.png'
-import imgJs from '/assets/logos/javascript.svg'
-import imgJunit from '/assets/logos/junit.png'
-import imgLinux from '/assets/logos/linux.svg'
-import imgMariadb from '/assets/logos/mariadb.png'
-import imgMysql from '/assets/logos/mysql.png'
-import imgNetbeans from '/assets/logos/netbeans.png'
-import imgPhp from '/assets/logos/php.svg'
-import imgPostgres from '/assets/logos/postgresql.png'
-import imgPython from '/assets/logos/python.svg'
-import imgReact from '/assets/logos/react.svg'
-import imgSymfony from '/assets/logos/symfony.svg'
-import imgVS from '/assets/logos/visual-studio.svg'
-import imgVmware from '/assets/logos/vmware.svg'
-import imgVSCode from '/assets/logos/vs-code.svg'
-import imgWindows from '/assets/logos/windows.svg'
+import React, { useState } from 'react'
+import { projectsData } from '../data/projectsData'
+import ProjectModal from './ProjectModal'
 
-const langLogos = [
-  { name: 'java', url: imgJava },
-  { name: 'csharp', url: imgCsharp },
-  { name: 'php', url: imgPhp },
-  { name: 'javascript', url: imgJs },
-  { name: 'react', url: imgReact },
-  { name: 'python', url: imgPython },
-  { name: 'bash', url: imgBash },
-  { name: 'html5', url: imgHtml5 },
-  { name: 'css3', url: imgCss3 },
-  { name: 'angular', url: imgAngular }
+const domains = [
+  { number: '01', symbol: '</>', title: 'Développement web', description: 'Construire des interfaces et relier les pages aux données de l’application.', practices: 'Interfaces responsive · Utilisateurs et permissions · Bases de données', technologies: [['HTML', 'html5.svg'], ['CSS', 'css3.svg'], ['JavaScript', 'javascript.svg'], ['React', 'react.svg'], ['Angular', 'angular.png'], ['PHP', 'php.svg'], ['Symfony', 'symfony.svg']], project: 'robot-league', evidence: 'Robot League' },
+  { number: '02', symbol: '{ }', title: 'Applications & données', description: 'Traduire des règles en code, manipuler des données et les rendre compréhensibles.', practices: 'Programmation objet · Algorithmique · Visualisation et automatisation', technologies: [['Java', 'java.png'], ['JavaFX', 'javafx.png'], ['Python', 'python.svg'], ['C#', 'csharp.svg'], ['C', 'c.svg'], ['MySQL', 'mysql.png'], ['PostgreSQL', 'postgresql.png'], ['MariaDB', 'mariadb.png']], project: 'visualisation-donnees', evidence: 'Visualisation de données' },
+  { number: '03', symbol: '>_', title: 'Outils & méthode', description: 'Organiser le travail et préparer un environnement adapté au projet.', practices: 'Versionnement · Linux et virtualisation · UML / MCD · Scrum', technologies: [['Git', 'git.svg'], ['Linux', 'linux.svg'], ['Windows', 'windows.svg'], ['Bash', 'bash.svg'], ['VMware', 'vmware.svg'], ['JUnit', 'junit.png'], ['VS Code', 'vs-code.svg'], ['Visual Studio', 'visual-studio.svg'], ['NetBeans', 'netbeans.png']], project: 'installation-poste', evidence: 'Installation de poste' },
 ]
 
-const toolLogos = [
-  { name: 'git', url: imgGit },
-  { name: 'netbeans', url: imgNetbeans },
-  { name: 'vmware', url: imgVmware },
-  { name: 'linux', url: imgLinux },
-  { name: 'windows', url: imgWindows },
-  { name: 'vs-code', url: imgVSCode },
-  { name: 'visual-studio', url: imgVS },
-  { name: 'symfony', url: imgSymfony },
-  { name: 'junit', url: imgJunit },
-  { name: 'javafx', url: imgJavafx },
-  { name: 'mysql', url: imgMysql },
-  { name: 'postgresql', url: imgPostgres },
-  { name: 'mariadb', url: imgMariadb }
-]
-
-const skills = [
-  { title: 'Langages', logos: langLogos },
-  { title: 'Outils & technologies', logos: toolLogos },
-  { title: 'Développement et Méthodologie', text: 'Algorithmique, Programmation orientée objet, automatisation, modélisation (UML, MCD), Méthodes Agiles (SCRUM)' }
-]
-
-export default function Skills(){
-  return (
-    <section id="competences" className="skills">
-      <div className="container">
-        <h2 className="section-title">Mes compétences</h2>
-        <div className="skills-grid">
-          {skills.map((s,i) => (
-            <motion.div className="skill-card" key={s.title} initial={{opacity:0, y:20}} whileInView={{opacity:1,y:0}} transition={{delay:i*0.4}} viewport={{once:true}}>
-              <h3>{s.title}</h3>
-
-              {s.logos && s.logos.length > 0 ? (
-                <div className="logo-marquee" aria-label={`${s.title} logos`}>
-                  <div className="marquee-track" role="list">
-                    {s.logos.map((L, idx) => (
-                      <img key={`${L.name}-${idx}`} src={L.url} alt={L.name} className="skill-logo" role="listitem" title={L.name} />
-                    ))}
-                    {s.logos.map((L, idx) => (
-                      <img key={`${L.name}-dup-${idx}`} src={L.url} alt={L.name} className="skill-logo" role="listitem" title={L.name} />
-                    ))}
-                  </div>
-                </div>
-              ) : (
-                <p>{s.text}</p>
-              )}
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
+export default function Skills() {
+  const [selectedProject, setSelectedProject] = useState(null)
+  return <section id="competences" className="skills skills-domains skills-compact">
+    <div className="container">
+      <span className="eyebrow">03 / COMPÉTENCES</span>
+      <h2 className="section-title">Mes compétences</h2>
+      <div className="domain-grid">{domains.map(domain => <article className="domain-card" key={domain.number}>
+        <div className="domain-top"><span className="domain-symbol" aria-hidden="true">{domain.symbol}</span><span className="domain-number">{domain.number}</span></div>
+        <h3>{domain.title}</h3>
+        <p className="domain-description">{domain.description}</p>
+        <p className="domain-summary">{domain.practices}</p>
+        <ul className="domain-technologies" aria-label={`Technologies : ${domain.title}`}>{domain.technologies.map(([name, file]) => <li key={name}><img loading="lazy" src={`${import.meta.env.BASE_URL}assets/logos/${file}`} alt="" /><span>{name}</span></li>)}</ul>
+        <button className="domain-evidence" onClick={() => setSelectedProject(projectsData.find(project => project.id === domain.project))}><span>{domain.evidence}</span><span aria-hidden="true">+</span></button>
+      </article>)}</div>
+    </div>
+    {selectedProject && <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />}
+  </section>
 }

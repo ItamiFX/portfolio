@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import photo1 from '/assets/Accueil.jpg'
+import photo1 from '/assets/accueilTBMCore.png'
 import photo2 from '/assets/stage.png'
 
 const technologies = [
@@ -97,7 +97,6 @@ export default function StageTBMCore(){
           {galleryPhotos.map((photo, index) => (
             <div className="stage-photo-slot" key={photo.label}>
               <img src={photo.src} alt={photo.alt} className="stage-photo-image" />
-              <div className="stage-photo-overlay" />
               <span className="stage-photo-index">0{index + 1}</span>
               <span className="stage-photo-caption">{photo.label}</span>
             </div>

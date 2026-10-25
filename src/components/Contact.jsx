@@ -18,7 +18,7 @@ export default function Contact(){
         <h2 className="section-title">Me contacter</h2>
         <div className="contact-content">
           <motion.div className="contact-short" initial={{opacity:0, y:6}} whileInView={{opacity:1,y:0}} viewport={{once:true}}>
-            <p>Pour toute opportunité de stage :</p>
+            <p>Un projet, une opportunité ou une question ? Échangeons.</p>
 
             <motion.ul className="contact-list" aria-label="Coordonnées" variants={listVariants} initial="hidden" whileInView="show" viewport={{once:true}}>
               <motion.li className="contact-item" variants={itemVariants}>
@@ -27,7 +27,7 @@ export default function Contact(){
                     <path d="M3 8.5v7A2.5 2.5 0 0 0 5.5 18h13A2.5 2.5 0 0 0 21 15.5v-7" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M21 8.5L12 13 3 8.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                  <span className="contact-label">marquetkillian71@gmail.com</span>
+                  <span className="contact-label">Mail</span>
                 </motion.a>
               </motion.li>
 

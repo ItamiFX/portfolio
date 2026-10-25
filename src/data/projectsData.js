@@ -21,7 +21,7 @@ export const projectsData = [
   {
     id: 'interface-graphique',
     title: 'Interface graphique de jeu',
-    desc: 'Interface graphique pour jeu de plateau - UI, animations et menus',
+    desc: 'Prototype d’interface pour un jeu de plateau : menus, animations et écrans de jeu.',
     image: imgIHM,
     images: [{ src: imgIHM, alt: 'Interface graphique de jeu' }],
     description: [
@@ -56,7 +56,7 @@ export const projectsData = [
   {
     id: 'visualisation-donnees',
     title: 'Visualisation de données',
-    desc: 'Visualisation de CSV sous forme de graphes, comparatifs de données, superpositions...',
+    desc: 'Application de visualisation et de comparaison de données issues de fichiers CSV.',
     image: imgSCH,
     images: [
       { src: imgSCH, alt: 'Visualisation de données 1' },
@@ -87,7 +87,7 @@ export const projectsData = [
   {
     id: 'visualisation-graphes',
     title: 'Visualisation de graphes',
-    desc: 'Application Java de visualisation',
+    desc: 'Application Java pour afficher et manipuler des graphes',
     image: imgGraphes,
     images: [
       { src: imgGraphes, alt: 'Visualisation de graphes 1' },
@@ -126,7 +126,7 @@ export const projectsData = [
   {
     id: 'bot-discord',
     title: 'Bot Discord - Vinted',
-    desc: 'Scraping & automation via Discord',
+    desc: 'Bot Python de recherche et de notification sur Discord',
     image: imgVinted,
     images: [{ src: imgVinted, alt: 'Bot Discord' }],
     description: [
@@ -154,7 +154,7 @@ export const projectsData = [
   {
     id: 'pixel-war',
     title: 'Pixel War',
-    desc: 'Jeu front-end en HTML/CSS/JS',
+    desc: 'Jeu web de chasse au trésor en équipe.',
     image: imgTresor,
     images: [{ src: imgTresor, alt: 'Pixel War' }],
     description: [
@@ -194,7 +194,7 @@ export const projectsData = [
   {
     id: 'robot-league',
     title: 'Robot League',
-    desc: 'Competition de football de Robots',
+    desc: 'Plateforme de gestion de compétitions de football pour robots',
     image: rl3,
     images: [
       { src: rl1, alt: 'Robot League aperçu 1' },

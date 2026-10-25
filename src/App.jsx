@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -11,6 +11,20 @@ import { AnimatePresence } from 'framer-motion'
 import { AnimationProvider } from './contexts/animations'
 
 export default function App() {
+  useEffect(() => {
+    const targets = document.querySelectorAll('main section > .container')
+    if (!('IntersectionObserver' in window)) return
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('section-visible')
+          observer.unobserve(entry.target)
+        }
+      })
+    }, { threshold: 0.08 })
+    targets.forEach(target => observer.observe(target))
+    return () => observer.disconnect()
+  }, [])
   return (
     <AnimationProvider>
       <div className="app-root">
@@ -18,10 +32,10 @@ export default function App() {
         <main>
           <AnimatePresence>
             <Hero key="hero" />
+            <Projects key="projects" />
             <About key="about" />
             <Skills key="skills" />
             <StageTBMCore key="stage-tbmcore" />
-            <Projects key="projects" />
             <Contact key="contact" />
           </AnimatePresence>
         </main>
